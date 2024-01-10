@@ -60,5 +60,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
-            JAR_FILE=build/libs/*.jar
+            JAR_FILE=./*.jar
 
