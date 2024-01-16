@@ -1,12 +1,12 @@
-name: Java CI
+name: Sample Backend App CI
 
-on: [push]
+on: push
 
 permissions: write-all
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: sample-backend-app
 
 jobs:
   build:
@@ -35,7 +35,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
