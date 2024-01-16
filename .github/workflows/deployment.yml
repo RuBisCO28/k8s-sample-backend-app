@@ -6,7 +6,7 @@ permissions: write-all
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: sample-backend-app
+  IMAGE_NAME: samplebackendapp
 
 jobs:
   build:
