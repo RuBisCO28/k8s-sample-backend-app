@@ -1,1 +1,25 @@
-
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driverClassName: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    cache-enabled: true
+    default-statement-timeout: 3000
+    map-underscore-to-camel-case: true
+    use-generated-keys: true
+  type-handlers-package: com.sample.k8s.demo.infrastructure.mybatis
+  mapper-locations: mapper/*.xml
+logging:
+  level:
+    org:
+      springframework: WARN
+    com:
+      sample:
+        k8s:
+          demo:
+            infrastructure:
+              mybatis:
+                mapper: DEBUG

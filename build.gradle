@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.sample.k8s'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 java {
 	sourceCompatibility = '17'
@@ -24,6 +24,7 @@ repositories {
 dependencies {
   implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter'
+  implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	compileOnly 'org.projectlombok:lombok'
